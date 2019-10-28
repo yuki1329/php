@@ -2,23 +2,60 @@
 <html lang="ja">
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css.css">
     <title>お問い合わせ</title>
 </head>
-<body>
-    <h1>お問い合わせ情報入力</h1>
+<body class="size2">
+    <h1>NexSeedプログラミンコース生徒様アンケート</h1>
+    <p>この度、環境改善のためにNexSeed生徒様向けにアンケートを実施いたします。<br>お忙しい所恐れ入りますが、下記のアンケートにご協力いただき、ご意見お聞かせ願えますと幸いです。</p>
     <form method="POST" action="check.php">
         <!-- GET/POST　情報の受け渡しができる -->
         <div>
-            ニックネーム<br>
+            氏名:
             <input type="text" name="nickname">
+            年齢:
+            <input type="text" name="age">
         </div>
         <div>
-            メールアドレス<br>
+            性別:
+            <label><input type="radio" name="sex" value="男">男</label>
+            <label><input type="radio" name="sex" value="女">女</label>
+            <label><input type="radio" name="sex" value="その他">その他</label>
+        </div>
+        <div>
+            メールアドレス:
             <input type="text" name="email">
         </div>
         <div>
-            お問い合わせ内容<br>
-            <textarea name="content"></textarea>
+            <h3>1.受講されている講師のお名前をお選びください</h3>
+        </div>
+        <div>
+                講師:
+                <label><input type="radio" name="teacher" value="神守由里子">神守由里子</label>
+                <label><input type="radio" name="teacher" value="尾宮重宏">尾宮重宏</label>
+                <label><input type="radio" name="teacher" value=" 枳本望"> 枳本望</label>
+        </div>
+        <div>
+            <h3>2.上記でチェックした講師の満足度を教えてください</h3>
+        </div>
+        <div>
+            満足度:
+            <label><input type="radio" name="cs" value="満足">満足</label>
+            <label><input type="radio" name="cs" value="やや満足">やや満足</label>
+            <label><input type="radio" name="cs" value="やや不満">やや不満</label>
+            <label><input type="radio" name="cs" value="不満">不満</label>
+        </div>
+            <div>
+            <h3>3.授業の改善して欲しい点、感想等をお書きください</h3>
+        </div>
+        <div>
+            <textarea name="content" cols="100" rows="10"></textarea>
+        </div>
+        <div>
+            <h3>NexSeedに対してのご意見、ご感想をお聞かせください(任意)</h3>
+        </div>
+        <div>
+            <textarea name="content2" cols="100" rows="10"></textarea>
         </div>
         <input type="submit" value="送信">
     </form>
